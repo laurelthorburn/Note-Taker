@@ -8,3 +8,6 @@ const PORT = 3001;
 const app = express();
 
 //psuedo code: need to store/retrieve 'fs'
+app.listen(PORT, () =>
+  console.log(`Example app listening at http://localhost:${PORT}`)
+);
