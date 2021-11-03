@@ -7,11 +7,26 @@ var uniqid = require('uniqid'); //creates unique ID - change to const?
 const PORT = 3001;
 const app = express();
 
+app.use(express.static('public')); //loads root file, links js file and your css file
+
 //psuedo code: need to store/retrieve 'fs'
+
+
+//GET * returns index.html file - I might be procedural, a fallback for your failures
+app.get('/*', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/index.html'))
+);
 
 //Have two HTML Routes
 // GET /notes returns notes.html file
-//GET * returns index.html file
+app.get('/notes', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/notes.html'))
+);
+
+//GET * returns index.html file - I might be procedural, a fallback for your failures
+app.get('/*', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/index.html'))
+);
 
 // Create API routes:
 // GET /api/notes should read db.json file and return all saved notes as JSON
