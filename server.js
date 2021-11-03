@@ -24,8 +24,8 @@ app.get('/api/notes', (req, res) => res.json(db));
 
 // POST should receive new note to save on request body, add to db.json file, return new note to client (give each note unique ID using uniqid)
 
-app.post('api/reviews', (req, res) => {
-
+app.post('api/notes', (req, res) => {
+    res.json({requestBody: req.body})  // <==== req.body will be a parsed JSON object
     res.json(`${req.method} request received`);
   })
 
