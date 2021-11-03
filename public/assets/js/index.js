@@ -69,7 +69,7 @@ const renderActiveNote = () => {
 const handleNoteSave = () => {
   const newNote = {
     title: noteTitle.value,
-    text: noteText.value,
+    text: noteText.value, //BONUS: is this where the unique id will go?
   };
   saveNote(newNote).then(() => {
     getAndRenderNotes();

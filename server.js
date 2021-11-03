@@ -27,12 +27,31 @@ app.get('/api/notes', (req, res) => res.json(db));
 app.post('api/notes', (req, res) => {
     res.json({requestBody: req.body})  // <==== req.body will be a parsed JSON object
     res.json(`${req.method} request received`);
+
+    // Destructuring assignment for the items in req.body
+const { title, text } = req.body;
+
+console.log({title, text});
   })
 
 
 //BONUS: DELETE
 // Add delete route to the app
 //DELETE /api/notes/:id = query parameter contains ID of note to delete.  Have to read all notes from db.json file and then remove note with given ID property and then rewrite notes to db.json file
+
+
+
+// if (product && review && username) {
+//     // Variable for the object we will save
+//     const newReview = {
+//       product,
+//       review,
+//       username,
+//       upvotes: Math.floor(Math.random() * 100),
+//       review_id: uuid(),
+//     };
+
+//Listen on PORT
 app.listen(PORT, () =>
   console.log(`Example app listening at http://localhost:${PORT}`)
 );
