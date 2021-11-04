@@ -10,6 +10,9 @@ const app = express();
 
 app.use(express.static('public')); //loads root file, links js file and your css file
 
+// have to use app.use to parse JSON
+app.use(express.json());
+
 //psuedo code: need to store/retrieve 'fs'
 
 // GET /notes returns notes.html file
@@ -24,14 +27,21 @@ app.get('/api/notes', (req, res) => res.json(db));
 
 // POST should receive new note to save on request body, add to db.json file, return new note to client (give each note unique ID using uniqid)
 
-app.post('api/notes', (req, res) => {
+app.post('/api/notes', (req, res) => {
+  console.log(req.body);
     res.json({requestBody: req.body})  // <==== req.body will be a parsed JSON object
-    res.json(`${req.method} request received`);
+    // res.json(`${req.method} request received`);
 
     // Destructuring assignment for the items in req.body
-const { title, text } = req.body;
+    const { title, text } = req.body;
 
-console.log({title, text});
+    if (title && text) {
+        // Variable for the object we will save
+        const newNote = {
+            title,
+            text,
+            note_id: uniqid(),
+        };}
   })
 
 
@@ -39,24 +49,13 @@ console.log({title, text});
 // Add delete route to the app
 //DELETE /api/notes/:id = query parameter contains ID of note to delete.  Have to read all notes from db.json file and then remove note with given ID property and then rewrite notes to db.json file
 
-
-
-// if (product && review && username) {
-//     // Variable for the object we will save
-//     const newReview = {
-//       product,
-//       review,
-//       username,
-//       upvotes: Math.floor(Math.random() * 100),
-//       review_id: uuid(),
-//     };
+//GET * returns index.html file - I might be procedural, a fallback for your failures
+app.get('/*', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/index.html'))
+);
 
 //Listen on PORT
 app.listen(PORT, () =>
   console.log(`Example app listening at http://localhost:${PORT}`)
 );
 
-//GET * returns index.html file - I might be procedural, a fallback for your failures
-app.get('/*', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/index.html'))
-);
