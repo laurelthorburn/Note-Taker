@@ -43,9 +43,12 @@ router.delete("/api/notes/:id", (req, res) => {
   const { id } = req.params;
   let notes = db; //const db = require('../db/db.json');
   const deleted = notes.find(note => note.id === id);
-  console.log(deleted);//i log the one selected successfully
+  // console.log(deleted);//i log the one selected successfully
   if (deleted) {
-    notes = notes.filter(note => note.id != id);
+    console.log(deleted); //i work
+    console.log(id); //i work
+    notes = notes.filter(note => note.id != id); //something is wrong with me
+    console.log(notes); //shows all of them except the deleted array!!
     res.status(200).json(deleted);
   } else {
     res.status(404)
