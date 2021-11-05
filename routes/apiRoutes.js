@@ -8,8 +8,6 @@ const { readFromFile, writeToFile, readAndAppend, readAndDelete } = require('./h
 
 // Create API routes:
 // GET /api/notes should read db.json file and return all saved notes as JSON
-// router.get('/api/notes', (req, res) => res.json(db));
-
 // GET Route for retrieving diagnostic information
 router.get('/api/notes', (req, res) => {
   readFromFile('./db/db.json').then((data) =>
@@ -35,21 +33,24 @@ router.post('/api/notes', (req, res) => {
       //psuedo code: need to store/retrieve 'fs'
        readAndAppend(newNote, './db/db.json');
 
-       console.log(req.body);
+      //  console.log(req.body);
        res.json(newNote);  // <==== req.body will be a parsed JSON object
    
   })
 
 // Bonus Delete
-router.delete('/api/notes/:id', (req, res) => {
+router.delete("/api/notes/:id", (req, res) => {
   const { id } = req.params;
-  const deleted = notes.find(notes => notes.id === id);
+  let notes = db; //const db = require('../db/db.json');
+  const deleted = notes.find(note => note.id === id);
+  console.log(deleted);//i log the one selected successfully
   if (deleted) {
-    notes = notes.filter(notes => notes.id != id);
+    notes = notes.filter(note => note.id != id);
     res.status(200).json(deleted);
   } else {
     res.status(404)
     .json({ message: "The note you are looking for does not exist :(" });
   }
 });
+
 module.exports = router;
