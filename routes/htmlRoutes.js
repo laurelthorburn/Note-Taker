@@ -7,7 +7,7 @@ router.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '../public/notes.html'))
 );
 
-//GET * returns index.html file - I might be procedural, a fallback for your failures - always goes last
+//GET *(WILD CARD) returns index.html file - always goes last
 router.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '../public/index.html'))
 );
