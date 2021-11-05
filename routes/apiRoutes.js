@@ -49,6 +49,8 @@ router.delete("/api/notes/:id", (req, res) => {
     console.log(id); //i work
     notes = notes.filter(note => note.id != id); //something is wrong with me
     console.log(notes); //shows all of them except the deleted array!!
+    writeToFile('./db/db.json', notes); //invalid argument type
+    res.json(notes);//invalid argument type
     res.status(200).json(deleted);
   } else {
     res.status(404)
