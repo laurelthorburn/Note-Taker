@@ -8,7 +8,16 @@ const { readFromFile, writeToFile, readAndAppend } = require('./helpers'); //des
 
 // Create API routes:
 // GET /api/notes should read db.json file and return all saved notes as JSON
-router.get('/api/notes', (req, res) => res.json(db));
+// router.get('/api/notes', (req, res) => res.json(db));
+
+// GET Route for retrieving diagnostic information
+router.get('/api/notes', (req, res) => {
+  readFromFile('./db/db.json').then((data) =>
+    res.json(JSON.parse(data))
+  )
+  .catch((err) => console.log(err))
+});
+
 
 // POST should receive new note to save on request body, add to db.json file, return new note to client (give each note unique ID using uniqid)
 router.post('/api/notes', (req, res) => {
@@ -23,13 +32,15 @@ router.post('/api/notes', (req, res) => {
         };
       // }
 
-    console.log(req.body);
-    res.json(newNote);  // <==== req.body will be a parsed JSON object
+      //psuedo code: need to store/retrieve 'fs'
+       readAndAppend(newNote, './db/db.json');
 
+       console.log(req.body);
+       res.json(newNote);  // <==== req.body will be a parsed JSON object
+   
   })
 
-  //psuedo code: need to store/retrieve 'fs'
-  //
+
 
 //BONUS: DELETE
 // Add delete route to the app
