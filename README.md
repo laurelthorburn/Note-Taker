@@ -120,5 +120,14 @@ git push origin yourname-branch
 
   <a name="creditsection"></a>
 ## Resources/Credit
-* 
+* https://www.npmjs.com/package/uniqid
+* https://developer.mozilla.org/en-US/docs/Web/API/Response/json
+* https://stackoverflow.com/questions/11625519/how-to-access-the-request-body-when-posting-using-node-js-and-express
+* https://stackoverflow.com/questions/20458890/delete-data-from-json-array
+* https://www.youtube.com/watch?v=pKd0Rpw7O48&t=3153s&ab_channel=ProgrammingwithMosh
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+* https://www.youtube.com/watch?v=K9jTQPb0Xso&ab_channel=BrettM
+
+
+
 
