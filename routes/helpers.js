@@ -1,6 +1,7 @@
 const fs = require('fs');
 const util = require('util');
 
+//Code is from Week 11, Day 3, 28-Student-Mini-Project
 // Promise version of fs.readFile
 const readFromFile = util.promisify(fs.readFile);
 
@@ -37,20 +38,5 @@ const readAndAppend = (content, file) => {
 //BONUS: DELETE
 // Add delete route to the app
 //DELETE /api/notes/:id = query parameter contains ID of note to delete.  Have to read all notes from db.json file and then remove note with given ID property and then rewrite notes to db.json file
-const readAndDelete = (content, file) => {
-  //find the matching id within the content
-  //remove the matching id from the array
-
-  // const course = course.find(c => c.id === did stuff)
-  fs.readFile(file, 'utf8', (err, data) => {
-    if (err) {
-      console.error(err);
-    } else {
-      const findData = JSON.find(data);
-      findData.push(content);
-      writeToFile(file, parsedData);
-    }
-  });
-}
 
 module.exports = { readFromFile, writeToFile, readAndAppend, readAndDelete };
