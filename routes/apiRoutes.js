@@ -42,7 +42,7 @@ router.post('/api/notes', (req, res) => {
 //BONUS: DELETE
 // Add delete route to the app
 //DELETE /api/notes/:id = query parameter contains ID of note to delete.  Have to read all notes from db.json file and then remove note with given ID property and then rewrite notes to db.json file
-router.delete("/api/notes/:id", (req, res) => {
+router.delete("/api/notes/:id", async (req, res) => {
   const { id } = req.params;
   let notes = require('../db/db.json'); //const db = require('../db/db.json');
   console.log(notes);
@@ -53,7 +53,7 @@ router.delete("/api/notes/:id", (req, res) => {
     console.log(id); //i work
     notes = notes.filter(note => note.id != id); //i work
     console.log(notes); //shows all of them except the deleted array!!
-    const finalNote = writeToFile('./db/db.json', notes); 
+    const finalNote = await writeToFile('./db/db.json', notes); 
     // res.json(notes);// am i needed???
     res.status(200).json(finalNote);
   } else {
