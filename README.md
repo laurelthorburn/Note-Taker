@@ -53,7 +53,7 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 ## Installation
 * Clone the repository using:
 ```
-git clone https://github.com/laurelthorburn/Team-Profile-Generator.git
+git clone https://github.com/laurelthorburn/Note-Taker.git
 ```
 * Ensure you are in the current working directory
 * Install dependencies (jest and inquirer) by opening the terminal (ctrl + j on windows) and running:
