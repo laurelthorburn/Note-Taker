@@ -114,9 +114,9 @@ git push origin yourname-branch
   <a name="linksection"></a>
   ## Links
 
-  Deployed Heroku Site:
+  Deployed Heroku Site: https://morning-reaches-98085.herokuapp.com/
   
-  Github Site: 
+  Github Site: https://github.com/laurelthorburn/Note-Taker
 
   <a name="creditsection"></a>
 ## Resources/Credit
