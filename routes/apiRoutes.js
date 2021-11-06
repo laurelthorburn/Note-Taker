@@ -42,24 +42,32 @@ router.post('/api/notes', (req, res) => {
 //BONUS: DELETE
 // Add delete route to the app
 //DELETE /api/notes/:id = query parameter contains ID of note to delete.  Have to read all notes from db.json file and then remove note with given ID property and then rewrite notes to db.json file
-router.delete("/api/notes/:id", async (req, res) => {
+router.delete("/api/notes/:id",  (req, res) => {
   const { id } = req.params;
  
-  let notes = await require('../db/db.json'); //const db = require('../db/db.json');
+  readFromFile('./db/db.json').then((notes) =>{
+    // const deleted = JSON.parse(notes); //provides the data 
+    // const deleted = notes.find(note => note.id === id);
+    // console.log(deleted); // undefined
+    // if (deleted) {
 
-  const deleted = notes.find(note => note.id === id);
-  // console.log(deleted);//i log the one selected successfully
-  if (deleted) {
+      notes = JSON.parse(notes).filter(note => note.id != id); //i work
+      console.log("filtered notes:\n", notes);
+      const finalNote = writeToFile('./db/db.json', notes); 
+      console.log("final note:\n", JSON.stringify(finalNote));
+      // res.json(notes);// am i needed???
+      res.status(200).json(finalNote);
+    // } else {
+    //   res.status(404)
+    //   .json({ message: "The note you are looking for does not exist :( ... I'm sorry" });
+    // }
 
-    notes = notes.filter(note => note.id != id); //i work
-    console.log(notes);
-    const finalNote = writeToFile('./db/db.json', notes); 
-    // res.json(notes);// am i needed???
-    res.status(200).json(finalNote);
-  } else {
-    res.status(404)
-    .json({ message: "The note you are looking for does not exist :( ... I'm sorry" });
   }
+  // res.json(JSON.parse(notes))
+)
+.catch((err) => console.log(err)); //const db = require('../db/db.json');
+
+  
 });
 
 //creating router export!

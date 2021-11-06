@@ -9,6 +9,8 @@ const app = express();
 
 app.use(express.static('public')); //loads root file, links js file and your css file
 
+app.use(express.urlencoded({ extended: true }));
+
 // have to use app.use to parse JSON
 app.use(express.json());
 
