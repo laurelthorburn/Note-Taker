@@ -44,7 +44,7 @@ router.post('/api/notes', (req, res) => {
 //DELETE /api/notes/:id = query parameter contains ID of note to delete.  Have to read all notes from db.json file and then remove note with given ID property and then rewrite notes to db.json file
 router.delete("/api/notes/:id", (req, res) => {
   const { id } = req.params;
-  let notes = ('./db/db.json'); //const db = require('../db/db.json');
+  let notes = require('./db/db.json'); //const db = require('../db/db.json');
   console.log(notes);
   const deleted = notes.find(note => note.id === id);
   // console.log(deleted);//i log the one selected successfully
