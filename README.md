@@ -2,7 +2,7 @@
 
 <a name="descsection"></a>
 ## Description
-The purpose of this project was to create a command-line generated team profile generator using node.js.  The user is prompted with a series of questions that will be added to their final generated HTML page.  Questions are broken down into manager role and optional engineer and intern questions.  The user may add as many engineers and interns as they would like and may select the option of "Finish building my team" in order to generate their final product.
+The purpose of this project was to create a note taker application that utilizes express.js on the backend and is deployed through Heroku.  The user is prompted with a homepage that, uuponpno button click, takes them to a note taker page where saved notes are displayed on the right hand column and a new note template is available  on the left hand column. The user is able to save and delete notes.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -17,10 +17,9 @@ The purpose of this project was to create a command-line generated team profile 
 7. [ Contributing. ](#contribsection)
 8. [ Tests. ](#testsection)
 9. [ Questions. ](#questionssection)
-10. [ Video. ](#videosection)
-11. [ Screenshots. ](#picsection)
-12. [ Links. ](#linksection)
-13. [ Resources/Credit. ](#creditsection)
+12. [ Screenshots. ](#picsection)
+13. [ Links. ](#linksection)
+14. [ Resources/Credit. ](#creditsection)
 
 <a name="usersection"></a>
 ## User Story
