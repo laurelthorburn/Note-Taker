@@ -35,8 +35,4 @@ const readAndAppend = (content, file) => {
 };
 
 
-//BONUS: DELETE
-// Add delete route to the app
-//DELETE /api/notes/:id = query parameter contains ID of note to delete.  Have to read all notes from db.json file and then remove note with given ID property and then rewrite notes to db.json file
-
 module.exports = { readFromFile, writeToFile, readAndAppend, readAndDelete };
