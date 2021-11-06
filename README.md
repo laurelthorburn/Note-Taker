@@ -2,7 +2,7 @@
 
 <a name="descsection"></a>
 ## Description
-The purpose of this project was to create a note taker application that utilizes express.js on the backend and is deployed through Heroku.  The user is prompted with a homepage that, uuponpno button click, takes them to a note taker page where saved notes are displayed on the right hand column and a new note template is available  on the left hand column. The user is able to save and delete notes.
+The purpose of this project was to create a note taker application that utilizes express.js on the backend and is deployed through Heroku.  The user is prompted with a homepage that, upon button click, takes them to a note taker page where saved notes are displayed on the right hand column and a new note template is available on the left hand column. The user is able to save and delete notes.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -55,22 +55,19 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 git clone https://github.com/laurelthorburn/Note-Taker.git
 ```
 * Ensure you are in the current working directory
-* Install dependencies (jest and inquirer) by opening the terminal (ctrl + j on windows) and running:
+* Install dependencies (express) by opening the terminal (ctrl + j on windows) and running:
 ```
 npm install
 ```
 * Run the project by typing the following in the terminal:
 ```
-node index.js
+node index.js || nodemon server
 ```
 
 
 <a name="usagesection"></a>
 ## Usage
-* In order to access the user questions, open the terminal (right click index.js and click 'open in integrated terminal')
-* Answer all prompted questions until the terminal reads "Your team is now on display, navigate to the folder 'dist' and then click 'index.html'. Great job building your team!"
-* In the sidebar of the current directory, open the dist folder and click the newly generated index.html
-* To view the index.html, right click on the file and select "open with live server"
+*  See deployed site link below.
 
 <a name="licensesection"></a>
 ## License
@@ -102,12 +99,7 @@ git push origin yourname-branch
 
   <a name="testsection"></a>
 ## Tests
-  1. Ensure you have installed jest (this was installed earlier when 'npm install' was run in the command line)
-  2. In the command line, write:
-```
-npm run test
-```
-  3. Confirm all four test files pass (see screenshot below). Test files are located in the tests folder and are titled: Employee.test.js, Engineer.test.js, Intern.test.js, and Manager.test.js
+  Not tests are available at this time.
 
   <a name="questionssection"></a>
 ## Questions?
@@ -115,25 +107,18 @@ npm run test
 
   Questions/comments/concerns? Please send an email to codinglaurel@gmail.com
   
-  <a name="videosection"></a>
-## Video
-  View video:https://drive.google.com/file/d/1m4HiXOib8MI8ZAha6zgAj42IsbLn_PDw/view?usp=sharing
-
   <a name="picsection"></a>
   ## Screenshots
-  ![Screenshot of Test Screen](./dist/Assets/Images/screenshot1.png)
-  ![Screenshot of Sample Site](./dist/Assets/Images/screenshot2.png)
-  ![Screenshot of Terminal](./dist/Assets/Images/screenshot3.png)
+  ![Screenshot of Test Screen]()
 
   <a name="linksection"></a>
   ## Links
 
-  Deployed SAMPLE Site: https://laurelthorburn.github.io/Team-Profile-Generator/
+  Deployed Heroku Site:
   
-  Github Site: https://github.com/laurelthorburn/Team-Profile-Generator
+  Github Site: 
 
   <a name="creditsection"></a>
 ## Resources/Credit
-* https://www.digitalocean.com/community/tutorials/nodejs-interactive-command-line-prompts
-* Fellow coder champion: [Ryan Paragas!](https://github.com/ParagasR)
+* 
 
