@@ -17,9 +17,10 @@ The purpose of this project was to create a note taker application that utilizes
 7. [ Contributing. ](#contribsection)
 8. [ Tests. ](#testsection)
 9. [ Questions. ](#questionssection)
-12. [ Screenshots. ](#picsection)
-13. [ Links. ](#linksection)
-14. [ Resources/Credit. ](#creditsection)
+10. [ Video. ](#videosection)
+11. [ Screenshots. ](#picsection)
+12. [ Links. ](#linksection)
+13. [ Resources/Credit. ](#creditsection)
 
 <a name="usersection"></a>
 ## User Story
@@ -99,7 +100,7 @@ git push origin yourname-branch
 
   <a name="testsection"></a>
 ## Tests
-  Not tests are available at this time.
+  No tests are available at this time.
 
   <a name="questionssection"></a>
 ## Questions?
@@ -107,6 +108,8 @@ git push origin yourname-branch
 
   Questions/comments/concerns? Please send an email to codinglaurel@gmail.com
   
+  <a name="videosection"></a>
+
   <a name="picsection"></a>
   ## Screenshots
   ![Screenshot of Test Screen]()
