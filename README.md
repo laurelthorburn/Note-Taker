@@ -109,10 +109,15 @@ git push origin yourname-branch
   Questions/comments/concerns? Please send an email to codinglaurel@gmail.com
   
   <a name="videosection"></a>
+## Video
+   ![Screenshot of Test Screen](./public/assets/media/videosample.gif)
 
   <a name="picsection"></a>
   ## Screenshots
-  ![Screenshot of Test Screen]()
+  ![Screenshot of Home Page](./public/assets/media/screenshot1.png)
+  ![Screenshot of Blank Note](./public/assets/media/screenshot2.png)
+  ![Screenshot of Written Note Sample](./public/assets/media/screenshot3.png)
+  ![Screenshot of Written Note Sample](./public/assets/media/screenshot4.png)
 
   <a name="linksection"></a>
   ## Links
